@@ -14,6 +14,6 @@ public class SpawnerScript : MonoBehaviour
 
     void SpawnPipe()
     {
-        GameObject newPipe = GameObject.Instantiate(pipe, transform.position, transform.rotation);
+        GameObject newPipe = Instantiate(pipe, new Vector2(transform.position.x, transform.position.y + Random.Range(-1.5f, 1.5f)), transform.rotation);
     }
 }
