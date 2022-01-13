@@ -20,6 +20,9 @@ public class SpawnerScript : MonoBehaviour
     {
         GameObject newPipe = Instantiate(pipe, new Vector2(transform.position.x, transform.position.y + Random.Range(-1.5f, 1.5f)), transform.rotation);
         score++;
-        scoreText.text = score.ToString();
+        if (score >= 2)
+        {
+            scoreText.text = (score - 2).ToString();
+        }
     }
 }
